@@ -9,7 +9,7 @@ function Login(){
 
 
     return (
-        <div>
+        <div className="login-box">
             <h1>Zaloguj się</h1>
             <input type="text" placeholder='Email'
                    value={email}
