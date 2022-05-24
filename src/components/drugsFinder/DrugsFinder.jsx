@@ -63,6 +63,8 @@ const drugs = [
 function DrugsFinder() {
     const [ingredientResult, setIngredientResult] = useState([]);
     const [ingredient, setIngredient] = useState('');
+    const [drug, setDrug] = useState('')
+    const [dose, setDose] = useState("")
 
     useEffect(() => {
         if (ingredient.length >= 2){
@@ -70,8 +72,19 @@ function DrugsFinder() {
         }
     }, [ingredient])
 
-    function handleIngredient(e) {
-        setIngredient(e.target.value)
+    function handleIngredient(event) {
+        setIngredient(event.target.value)
+    }
+
+    function handleDrug(event) {
+        const drugName = event.target.value
+        setDrug(drugName)
+        const doseResult = drugs.flatMap(item => item.drugs).filter((item) => item.name === drugName)
+
+        if (doseResult.length){
+            const {dose, unit} = doseResult[0];
+            setDose(`${dose}${unit}`);
+        }
     }
 
     return (
@@ -89,7 +102,7 @@ function DrugsFinder() {
             </div>
             <div className="control-group">
                 <label htmlFor="drugName">Nazwa leku</label>
-                <select id="drugName">
+                <select id="drugName" value={drug} onChange={handleDrug}>
                     <option value=""></option>
                     {drugs
                         .filter((drug) => drug.activeIngridient.includes(ingredient))
@@ -103,6 +116,7 @@ function DrugsFinder() {
             </div>
 
             <h2>Zalecana dawka</h2>
+            {dose}
             <div>
                 <Link to="/" className="btn btn-icon">Rozpocznij podawanie lekarstw <span>+</span></Link>
             </div>
