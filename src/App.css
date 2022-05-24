@@ -28,7 +28,7 @@ input {
 }
 
 .btn-icon {
-    padding-right: 30px;
+    padding-right: 35px;
 }
 
 .btn > span {
@@ -36,6 +36,6 @@ input {
     position: absolute;
     top: 50%;
     display: inline-block;
-    right: 6px;
+    right: 10px;
     transform: translateY(-55%);
 }
