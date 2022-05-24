@@ -3,13 +3,15 @@ import ChildrenNav from "../childrenNav/ChildrenNav";
 import DrugsFinder from "../drugsFinder/DrugsFinder";
 import "./HomePage.css"
 
-function HomePage(){
+function HomePage() {
     return (
-        <div className="home-card">
+        <>
             <Navbar/>
-            <ChildrenNav/>
-            <DrugsFinder/>
-        </div>
+            <div className="home-card">
+                <ChildrenNav/>
+                <DrugsFinder/>
+            </div>
+        </>
     )
 }
 
