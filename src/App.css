@@ -24,4 +24,18 @@ input {
     margin: 0.625rem;
     text-decoration: none;
     display: inline-block;
+    position: relative;
+}
+
+.btn-icon {
+    padding-right: 30px;
+}
+
+.btn > span {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    right: 6px;
+    transform: translateY(-55%);
 }

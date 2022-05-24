@@ -1,5 +1,6 @@
 import React from 'react';
 import "./DrugsFinder.css"
+import {Link} from "react-router-dom";
 
 function DrugsFinder() {
     return (
@@ -16,6 +17,9 @@ function DrugsFinder() {
             </div>
 
             <h2>Zalecana dawka</h2>
+            <div>
+                <Link to="/" className="btn btn-icon">Rozpocznij podawanie lekarstw <span>+</span></Link>
+            </div>
         </>
     );
 }
