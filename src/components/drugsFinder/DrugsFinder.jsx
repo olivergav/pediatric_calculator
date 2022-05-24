@@ -89,7 +89,17 @@ function DrugsFinder() {
             </div>
             <div className="control-group">
                 <label htmlFor="drugName">Nazwa leku</label>
-                <input type="text" id="drugName"/>
+                <select id="drugName">
+                    <option value=""></option>
+                    {drugs
+                        .filter((drug) => drug.activeIngridient.includes(ingredient))
+                        .flatMap(drug => drug.drugs)
+                        .map(drug => (
+                        <option key={drug.name} value={drug.name}>
+                            {drug.name}
+                        </option>
+                    ))
+                }</select>
             </div>
 
             <h2>Zalecana dawka</h2>
