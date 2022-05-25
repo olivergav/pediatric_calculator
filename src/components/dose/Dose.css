@@ -1,0 +1,12 @@
+.calendar-mask {
+    overflow-y: auto;
+    width: 100%;
+
+
+}
+
+
+.calendar-map {
+    display: flex;
+    width: 200%;
+}

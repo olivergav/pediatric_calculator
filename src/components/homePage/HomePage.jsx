@@ -3,13 +3,14 @@ import ChildrenNav from "../childrenNav/ChildrenNav";
 import DrugsFinder from "../drugsFinder/DrugsFinder";
 import "./HomePage.css"
 
-function HomePage() {
+function HomePage({activeChild, setActiveChild, children}) {
+
     return (
         <>
             <Navbar/>
             <div className="home-card">
-                <ChildrenNav/>
-                <DrugsFinder/>
+                <ChildrenNav children={children} activeChild={activeChild} setActiveChild={setActiveChild} showUI={true}/>
+                <DrugsFinder activeChild={activeChild}/>
             </div>
         </>
     )

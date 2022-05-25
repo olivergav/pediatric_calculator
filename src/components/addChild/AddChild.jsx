@@ -4,7 +4,7 @@ import girl_avatar from "./../../images/girl_avatar.png"
 import './AddChild.css'
 import NavBar from "../navBar/NavBar";
 
-function AddChild() {
+function AddChild({activeChild, setActiveChild, children}) {
     const [childName, setChildName] = useState("");
     const [gender, setGender] = useState("");
     const [weight, setWeight] = useState("");

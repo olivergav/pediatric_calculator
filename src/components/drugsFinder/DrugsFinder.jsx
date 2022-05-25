@@ -60,7 +60,7 @@ const drugs = [
     }
 ]
 
-function DrugsFinder() {
+function DrugsFinder({activeChild}) {
     const [ingredientResult, setIngredientResult] = useState([]);
     const [ingredient, setIngredient] = useState('');
     const [drug, setDrug] = useState('')
@@ -118,7 +118,7 @@ function DrugsFinder() {
             <h2>Zalecana dawka</h2>
             {dose}
             <div>
-                <Link to="/" className="btn btn-icon">Rozpocznij podawanie lekarstw <span>+</span></Link>
+                <Link to={`/dose/${activeChild}`} className="btn btn-icon">Rozpocznij podawanie lekarstw <span>+</span></Link>
             </div>
         </>
     );
