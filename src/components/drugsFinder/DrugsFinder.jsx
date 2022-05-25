@@ -118,7 +118,7 @@ function DrugsFinder({activeChild}) {
             <h2>Zalecana dawka</h2>
             {dose}
             <div>
-                <Link to={`/dose/${activeChild}`} className="btn btn-icon">Rozpocznij podawanie lekarstw <span>+</span></Link>
+                <Link to={`/dose/${activeChild}`} className="btn btn-icon" state={{drug: drug}}>Rozpocznij podawanie lekarstw <span>+</span></Link>
             </div>
         </>
     );

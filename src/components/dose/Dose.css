@@ -9,4 +9,5 @@
 .calendar-map {
     display: flex;
     width: 200%;
+    cursor: pointer;
 }
