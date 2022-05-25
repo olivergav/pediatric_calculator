@@ -1,4 +1,5 @@
 import React from 'react';
+import "./TimeLine.css"
 
 function TimeLine({timeLineData, activeDrugs}) {
     return (
@@ -11,8 +12,8 @@ function TimeLine({timeLineData, activeDrugs}) {
                 <span>Objawy </span>
             </div>
             <div>
-                {timeLineData.map(({time, drugName, dosage, temperature, symptoms, checked, id}) => (
-                    <div key={id}>
+                {timeLineData.filter(item => activeDrugs.includes(item.drugName)).map(({time, drugName, dosage, temperature, symptoms, checked, id}) => (
+                    <div key={id} className="timeline-line">
                         <span>{time.getHours()}:{time.getMinutes()} </span>
                         <span>{drugName} </span>
                         <span>{dosage} </span>

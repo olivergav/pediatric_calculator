@@ -46,15 +46,6 @@ const timeLineData = [
         checked: false,
         id: 4,
     },
-    {
-        time: new Date(),
-        drugName: 'ibufen',
-        dosage: "5ml",
-        temperature: undefined,
-        symptoms: [],
-        checked: false,
-        id: 5,
-    },
 ]
 
 function Dose({activeChild, setActiveChild, children}) {
@@ -63,7 +54,7 @@ function Dose({activeChild, setActiveChild, children}) {
     const location = useLocation();
     // const [drugs, setDrugs] = useState([location.state.drug]);
     const [drugs, setDrugs] = useState(["ibum", "paracetamol", "apap", "etopiryna"]);
-    const [activeDrugs, setActiveDrugs] = useState([])
+    const [activeDrugs, setActiveDrugs] = useState(drugs)
 
     return (
         <>
